@@ -1,0 +1,75 @@
+<%- include ../layouts/header.ejs %>
+<% if (messages.error) { %>
+    <p style="color: red"><%- messages.error %></p> 
+<% } %>
+<% if (messages.success) { %>
+    <p style="color: red"><%- messages.success %></p> 
+<% } %>
+<!-- <form action="/users/add" method="post" name="form1" style="margin-top: 100px; margin-left: 330px;">
+    <table width="25%" border="0">
+        <tr>
+            <td>Judul</td>
+            <td><input type="text" name="judul" id="judul" value="<%= judul %>"></td>
+        </tr>
+        <tr>
+            <td>Penulis</td>
+            <td><input type="text" name="penulis" id="penulis" value="<%= penulis %>"></td>
+        </tr>
+        <tr>
+            <td>harga</td>
+            <td><input type="text" name="harga" id="harga" value="<%= harga %>"></td>
+        </tr>
+        <tr>
+            <td>No Telephone</td>
+            <td><input type="text" name="no" id="no" value="<%= no %>"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" name="Submit" value="Add"/></td>
+        </tr>
+        
+    </table>
+</form> -->
+
+<div class="col-lg-12" style="margin-top: 130px; width: 1080px; margin-left: 245px; padding-bottom: 30px;">
+    <section class="panel">
+        <header class="panel-heading">
+            Tambah Buku
+        </header>
+        <table style="margin-left: 30px; margin-top: -130px; padding-bottom: -30px;">
+        <div class="panel-body">
+            <div class="position-center">
+                <form action="/users/add" method="post" name="form1"role="form" style="height: 10px;">
+                <tr><br><div class="form-group">
+                   <td><label for="exampleInputharga1"  style="margin-bottom: 10px;">Judul</label></td> 
+                   <td><input type="text" name="judul" id="judul" value="<%= judul %>" style="margin-bottom: 10px; width: 800px; border-radius: 4px; border: 1;"></td> 
+                </div> </tr>
+                <tr><div class="form-group">
+                    <td><label for="exampleInputPassword1"  style="margin-bottom: 10px;">Penulis</label></td>
+                    <td><input type="text" name="penulis" id="penulis" value="<%= penulis %>"  style="margin-bottom: 10px;width: 800px; border-radius: 4px; border: 1;"></td>
+                </div><br></tr>
+                <tr><div class="form-group">
+                    <td><label for="exampleInputPassword1"  style="margin-bottom: 10px;">Tahun</label></td>
+                    <td><input type="text" name="tahun" id="tahun" value="<%= tahun %>"  style="margin-bottom: 10px;width: 800px; border-radius: 4px; border: 1;"></td>
+                </div><br></tr>
+                <tr><div class="form-group">
+                        <td> <label for="exampleInputFile"  style="margin-bottom: 10px;">Harga</label></td>
+                    <td><input type="text" name="harga" id="harga" value="<%= harga %>"  style="margin-bottom: 10px;width: 800px; border-radius: 4px; border: 1;"></td>
+                </div></tr>
+                <tr><div class="form-group">
+                    <td><label for="exampleInputFile"  style="margin-bottom: 10px;">Stock</label></td>
+                    <td><input type="text" name="no" id="no" value="<%= no %>" style="margin-bottom: 10px;width: 800px; border-radius: 4px; border: 1;"></td>
+                </div></tr>
+                
+                <tr><div class="checkbox">
+                   <td><label>
+                        <input type="checkbox"> Check me out
+                    </label></td> 
+                </div></tr>
+                <td><button  type="submit" name="Submit" value="Add" class="btn btn-info" style="margin-bottom: 20px; margin-top: 20px; width: 100px;">Add</button></td>
+            </form>
+            </div>
+
+        </div>
+    </table>
+
